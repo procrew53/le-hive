@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Hive - Fine Dining Experience</title>
+    <link rel="stylesheet" href="tooplate-bistro-elegance.css">
+<!--
+
+Tooplate 2148 Le Hive
+
+
+Free HTML CSS Template
+
+-->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Golden-orange hexagon wings/honeycomb structure -->
+                    <path d="M30 20 L50 10 L70 20 L70 40 L50 50 L30 40 Z" stroke="#D4A017" stroke-width="2" fill="none"/>
+                    <path d="M30 60 L50 50 L70 60 L70 80 L50 90 L30 80 Z" stroke="#D4A017" stroke-width="2" fill="none"/>
+                    
+                    <!-- Central H letter -->
+                    <path d="M35 25 L35 75 M65 25 L65 75 M35 50 L65 50" stroke="#000" stroke-width="6" stroke-linecap="round"/>
+                    
+                    <!-- Hexagon with bee above H -->
+                    <path d="M42 15 L50 10 L58 15 L58 25 L50 30 L42 25 Z" stroke="#000" stroke-width="2" fill="none"/>
+                    
+                    <!-- Bee body (striped) -->
+                    <ellipse cx="50" cy="20" rx="4" ry="6" fill="#D4A017"/>
+                    <line x1="50" y1="17" x2="50" y2="23" stroke="#000" stroke-width="1"/>
+                    <circle cx="50" cy="18" r="1.5" fill="#000"/>
+                    
+                    <!-- Bee antennae -->
+                    <path d="M48 16 L47 13 M52 16 L53 13" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
+                    
+                    <!-- Bee wings -->
+                    <ellipse cx="47" cy="19" rx="2" ry="3" fill="none" stroke="#000" stroke-width="1" opacity="0.7"/>
+                    <ellipse cx="53" cy="19" rx="2" ry="3" fill="none" stroke="#000" stroke-width="1" opacity="0.7"/>
+                    
+                    <!-- Bee legs -->
+                    <path d="M48 24 L47 26 M50 24 L50 26 M52 24 L53 26" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
+                    
+                    <!-- Golden-orange triangles -->
+                    <path d="M40 30 L45 35 L40 40 Z" fill="#D4A017"/>
+                    <path d="M60 30 L55 35 L60 40 Z" fill="#D4A017"/>
+                </svg>
+                <span>Le Hive</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://procrew-resto.netlify.app/auth" target="_blank" class="nav-auth-btn">Login</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="diagonal-grid"></div>
+        <div class="static-decoration"></div>
+        <div class="bottom-right-decoration"></div>
+        <div class="hero-carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide active" style="background-image: url('images/carosel 1.jpg');">
+                    <div class="slide-overlay"></div>
+                    <div class="hero-content">
+                        <h1>Welcome to Le Hive</h1>
+                        <!-- <p>Experience culinary excellence in an atmosphere of refined sophistication</p> -->
+                        <a href="#menu" class="cta-btn">Explore Our Menu</a>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('images/Caosel 2.jpg');">
+                    <div class="slide-overlay"></div>
+                    <div class="hero-content">
+                        <h1>Crafted with Pure Sweetness</h1>
+                        <!-- <p>Discover exquisite flavors crafted with passion and precision</p> -->
+                        <a href="#menu" class="cta-btn">View Our Dishes</a>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('images/carosel 3.jpg');">
+                    <div class="slide-overlay"></div>
+                    <div class="hero-content">
+                        <h1>Where Fine Dining Meets Unforgettable Moments</h1>
+                        <!-- <p>Join us for an authentic culinary journey through Cameroon's finest cuisine</p> -->
+                        <a href="#contact" class="cta-btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Navigation -->
+            <div class="carousel-nav">
+                <button class="carousel-btn prev" onclick="changeSlide(-1)">&#8249;</button>
+                <button class="carousel-btn next" onclick="changeSlide(1)">&#8250;</button>
+            </div>
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="goToSlide(0)"></span>
+                <span class="indicator" onclick="goToSlide(1)"></span>
+                <span class="indicator" onclick="goToSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Signature Menu</h2>
+        <div class="menu-grid">
+            <!-- Monday -->
+            <div class="day-group">
+                <div class="day-header">Monday</div>
+                <div class="day-items">
+                    <div class="menu-item">
+                        <img src="images/Sauce with Smoked Protein.jpg" alt="Sauce with Smoked Protein" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Sauce with Smoked Protein</h3>
+                            <p>A rich, slow-simmered sauce infused with the deep flavor of your choice of smoked pork, chicken, liver, gizzard, or beef.</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                           
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('truffle-risotto')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/The Grills.jpg" alt="The Grills" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>The Grills</h3>
+                            <p>Tender, flame-licked cuts of pork, chicken, sausage, or beef, seasoned with our signature spice rub.</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                            
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('grilled-salmon')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tuesday -->
+            <div class="day-group">
+                <div class="day-header">Tuesday</div>
+                <div class="day-items">
+                    <div class="menu-item">
+                        <img src="images/Marvelous Ogbonor Soup.jpg" alt="Marvelous Ogbonor Soup" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Marvelous Ogbonor Soup</h3>
+                            <p>Premium beef tenderloin wrapped in puff pastry with mushroom duxelles</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                            
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('beef-wellington')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/Majestic Ndoler.jpg" alt="Majestic Ndoler" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Majestic Ndoler</h3>
+                            <p>Cameroon's iconic bitter-leaf dish, creamy with ground peanuts and expertly seasoned for a royal taste.</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                        
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('lobster-thermidor')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wednesday -->
+            <div class="day-group">
+                <div class="day-header">Wednesday</div>
+                <div class="day-items">
+                    <div class="menu-item">
+                        <img src="images/Fantabolous Ekwang.jpg" alt="Fantabolous Ekwang" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Fantabolous Ekwang</h3>
+                            <p>Finely grated cocoyam wrapped in fresh green leaves and simmered in a rich, spicy palm oil bouillon.</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                           
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('duck-confit')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/Obstacled Okro.jpg" alt="Obstacled Okro" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Obstacled Okro</h3>
+                            <p>A vibrant, textured okra stew loaded with a delicious variety of seafood and meat "obstacles."</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                   
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('chocolate-souffle')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thursday -->
+            <div class="day-group">
+                <div class="day-header">Thursday</div>
+                <div class="day-items">
+                    <div class="menu-item">
+                        <img src="images/Classic Fried Rice.jpg" alt="Classic Fried Rice" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Classic Fried Rice</h3>
+                            <p>Fragrant, golden rice stir-fried with garden-fresh vegetables and a blend of savory aromatic spices.</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                    
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('chocolate-souffle')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/Khati Khati.jpg" alt="Khati Khati" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Khati Khati</h3>
+                            <p>Traditionally charcoal-grilled chicken sautéed in a spicy palm oil sauce for an authentic smoky finish.</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                           
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('chocolate-souffle')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Friday -->
+            <div class="day-group">
+                <div class="day-header">Friday</div>
+                <div class="day-items">
+                    <div class="menu-item">
+                        <img src="images/Forest Green Eru.jpg" alt="Forest Green Eru" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Forest Green Eru</h3>
+                            <p>A nutrient-rich delicacy of finely shredded wild greens and waterleaf, slow-cooked in traditional red oil.</p>
+                            <div class="price">Price: 3000 FCFA</div> 
+                           
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('chocolate-souffle')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/Sautéed Snails.jpg" alt="Sautéed Snails" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Sautéed Snails</h3>
+                            <p>Succulent, jumbo snails pan-seared with peppers and onions for a spicy, tender, and savory treat.</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                           
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('chocolate-souffle')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saturday -->
+            <div class="day-group saturday-group">
+                <div class="day-header">Saturday</div>
+                <div class="day-items saturday-items">
+                    <div class="menu-item">
+                        <img src="images/Assorted Bush Meat.jpg" alt="Assorted Bush Meat" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Assorted Bush Meat</h3>
+                            <p>Premium, earthy wild game slow-cooked to perfection in a seasoned broth for the ultimate traditional feast.</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                            
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('chocolate-souffle')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/Mountainous Kwacoco.jpg" alt="Mountainous Kwacoco" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Mountainous Kwacoco</h3>
+                            <p>Steamed, grated cocoyam parcels—the perfect dense and delicious companion to any savory stew.</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                           
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('chocolate-souffle')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/Fresh Cornchaff.jpg" alt="Fresh Cornchaff" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Fresh Cornchaff</h3>
+                            <p>A hearty, comforting medley of corn and beans slow-cooked with smoked fish and traditional spices.</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                           
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('chocolate-souffle')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sunday -->
+            <div class="day-group">
+                <div class="day-header">Sunday</div>
+                <div class="day-items">
+                    <div class="menu-item">
+                        <img src="images/Achu Pepper Soup.jpg" alt="Achu Pepper Soup" class="menu-item-image">
+                        <div class="menu-item-content">
+                            <h3>Achu Pepper Soup</h3>
+                            <p>Our signature spicy yellow soup, served with pounded cocoyam and your choice of tender goat or snails.</p>
+                            <div class="price">Price: 3000 FCFA</div>
+                            
+                            <!-- <button class="ingredients-btn" onclick="showIngredients('chocolate-souffle')">View Ingredients</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Bonamoussadi, Douala<br>
+                Gourmet District, GD 12345<br>
+                Phone: (+237) 123-4567<br>
+                Email: info@bistroelegance.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Monday - Thursday: 5:00 PM - 10:00 PM<br>
+                Friday - Saturday: 5:00 PM - 11:00 PM<br>
+                Sunday: 5:00 PM - 9:00 PM<br>
+                Closed on major holidays</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p><a href="#">Facebook</a><br>
+                <a href="#">Instagram</a><br>
+                <a href="#">Twitter</a><br>
+                <a href="#">LinkedIn</a></p>
+            </div>
+        </div>
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #555; text-align: center;">
+            <p>&copy; 2026 Le Hive. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Ingredients Modal -->
+    <div id="ingredientsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Dish Ingredients</h3>
+            <ul id="ingredientsList" class="ingredient-list"></ul>
+        </div>
+    </div>
+
+<script src="tooplate-bistro-scripts.js"></script>
+</body>
+</html>
