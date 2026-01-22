@@ -841,6 +841,65 @@ footer {
 	color: #555;
 }
 
+/* Dessert Section Styles */
+#foods,
+#drinks {
+	padding-bottom: 0;
+}
+
+#desserts {
+	padding-top: 2rem;
+}
+
+.dessert-content {
+	max-width: 800px;
+	margin: 0 auto;
+	background: #ffffff;
+	padding: 3rem;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+	border: 1px solid #f0f0f0;
+}
+
+.dessert-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.dessert-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.2rem 0;
+	border-bottom: 1px dashed #e0e0e0;
+	transition: all 0.3s ease;
+}
+
+.dessert-item:last-child {
+	border-bottom: none;
+}
+
+.dessert-item:hover {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background-color: #fcfcfc;
+	border-radius: 8px;
+	border-bottom-color: transparent;
+}
+
+.dessert-name {
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #333;
+}
+
+.dessert-price {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #e74c3c;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
 	.nav-links {
