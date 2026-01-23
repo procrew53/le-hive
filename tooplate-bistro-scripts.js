@@ -24,7 +24,7 @@
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.close-lightbox');
 
-    // Add click event to all drink images
+    // Add click event to all drink and food images in grids
     const drinkImages = document.querySelectorAll('.drinks-grid img');
     drinkImages.forEach(img => {
         img.style.cursor = 'pointer'; // Make it look clickable

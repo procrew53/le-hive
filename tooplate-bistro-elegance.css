@@ -969,6 +969,57 @@ footer {
 	transform: translateY(-5px);
 }
 
+.foods-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	padding: 20px;
+}
+
+.food-card {
+	background: #ffffff;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+	border: 1px solid #f0f0f0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.food-card img {
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+}
+
+.food-card-content {
+	padding: 1.2rem 1.2rem 0.6rem 1.2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.food-card-content h3 {
+	color: #333;
+	font-size: 1.2rem;
+}
+
+.food-card-content p {
+	color: #666;
+	font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+	.foods-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.foods-grid {
+		grid-template-columns: 1fr;
+	}
+}
 /* Mobile Responsive */
 @media (max-width: 768px) {
 	.nav-links {
