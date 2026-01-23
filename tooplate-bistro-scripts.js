@@ -4,15 +4,56 @@
 
 // https://www.tooplate.com/view/2148-bistro-elegance
 
-// Mobile menu toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+ 
+    menuToggle.addEventListener('click', () => {
+       navLinks.classList.toggle('active');
+    });
 
-menuToggle.addEventListener('click', () => {
-   navLinks.classList.toggle('active');
-});
+    // Lightbox Functionality
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox-modal';
+    lightbox.innerHTML = `
+       <span class="close-lightbox">&times;</span>
+       <img class="lightbox-content" id="lightbox-img">
+    `;
+    document.body.appendChild(lightbox);
 
-// Smooth scrolling for navigation links
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close-lightbox');
+
+    // Add click event to all drink images
+    const drinkImages = document.querySelectorAll('.drinks-grid img');
+    drinkImages.forEach(img => {
+        img.style.cursor = 'pointer'; // Make it look clickable
+        img.addEventListener('click', function() {
+            lightbox.style.display = 'block';
+            lightboxImg.src = this.src;
+        });
+    });
+
+    // Close functionality
+    closeBtn.addEventListener('click', function() {
+        lightbox.style.display = 'none';
+    });
+
+    // Close when clicking outside the image
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.style.display === 'block') {
+            lightbox.style.display = 'none';
+        }
+    });
+ 
+    // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
    anchor.addEventListener('click', function (e) {
       e.preventDefault();
